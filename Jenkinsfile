@@ -21,14 +21,14 @@ pipeline {
 
         stage('3. Build & Tag Docker Image') {
             steps {
-                bat "docker build -t ${REGISTRY}/${IMAGE_NAME}:${BUILD_NUMBER} -t ${REGISTRY}/${IMAGE_NAME}:latest ."
+                bat "C:\\Users\\STUDENT\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe build -t ${REGISTRY}/${IMAGE_NAME}:${BUILD_NUMBER} -t ${REGISTRY}/${IMAGE_NAME}:latest ."
             }
         }
 
         stage('4. Push Image to Registry') {
             steps {
-                bat "docker push ${REGISTRY}/${IMAGE_NAME}:${BUILD_NUMBER}"
-                bat "docker push ${REGISTRY}/${IMAGE_NAME}:latest"
+                bat "C:\\Users\\STUDENT\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe push ${REGISTRY}/${IMAGE_NAME}:${BUILD_NUMBER}"
+                bat "C:\\Users\\STUDENT\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe push ${REGISTRY}/${IMAGE_NAME}:latest"
             }
         }
     }
